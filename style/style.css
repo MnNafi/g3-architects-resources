@@ -31,6 +31,31 @@ h1, h2, h3, h4{
     font-weight: 600;
 }
 
+.text-light-gray{
+    font-size: 1rem;
+    color: #727272;
+}
+
+.text-align-center{
+    text-align: center;
+}
+
+.text-align-justify{
+    text-align: justify;
+}
+
+.color-light-gray{
+    color: #727272;
+}
+
+.color-dark-gray{
+    color: #131313;
+}
+
+.color-orange{
+    color: #FF900E;
+}
+
 
 /* Header Design Start Here */
 header{
@@ -54,6 +79,7 @@ nav{
 nav ul{
     display: flex;
     gap: 3rem;
+    padding: 0px;
 }
 
 nav li{
@@ -87,15 +113,41 @@ nav li a{
     text-align: center;
 }
 
-.banner-description{
-    text-align: center;
-    font-size: 1rem;
-    color: #727272;
-}
-
 .banner-img{
     width: 100%;
 }
+
+/* Main Style Start here */
+
+main{
+    margin-top: 5.31rem;
+    padding: 0px 240px;
+}
+
+.team-container{
+    display: flex;
+    align-items: center;
+    column-gap: 70px;
+}
+
+.team-image-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.team-image-container img{
+    width: 100%;
+}
+
+.team-description-container{
+    max-width: 500px;
+}
+
+.team-title{
+    font-size: 2.8rem;
+}
+
 
 
 
@@ -103,11 +155,20 @@ nav li a{
 
 @media  screen and (max-width: 576px) {
     header{
-        padding: 20px;
+        padding: 2rem;
         width: 100%;
     }
-    nav{
+    nav, .team-container{
         flex-direction: column;
+    }
+
+    main{
+        margin-top:3rem;
+        padding: 0px 2rem;
+    }
+
+    .team-image-container{
+        grid-template-columns: 1fr;
     }
 }
 
